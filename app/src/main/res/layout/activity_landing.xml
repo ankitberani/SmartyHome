@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.LandingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/instruction"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivinstructionLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/infor_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+        <com.smartyhome.app.utils.TextviewLight
+            android:id="@+id/tvtextfirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_to"
+            android:textColor="@color/primary_dark"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivinstructionLogo" />
+
+        <com.smartyhome.app.utils.TextviewBold
+            android:id="@+id/tvtextsecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ispume_app"
+            android:textColor="@color/primary_dark"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvtextfirst" />
+
+        <com.smartyhome.app.utils.TextviewLight
+            android:id="@+id/tvtextthird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ispume_app_simply"
+            android:textColor="@color/secondary"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvtextsecond"></com.smartyhome.app.utils.TextviewLight>
+
+        <LinearLayout
+            android:id="@+id/lldotContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvSkip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="start|center"
+            app:layout_constraintTop_toBottomOf="@+id/tvtextthird">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rounded_corner" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/view2"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dot" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/view3"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dot" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/view4"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dot" />
+
+        </LinearLayout>
+
+
+        <com.smartyhome.app.utils.TextviewLight
+            android:id="@+id/tvSkip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/skip"
+            android:textColor="@color/secondary"
+            android:textSize="@dimen/sp_16"
+            android:gravity="start|center"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintEnd_toStartOf="@+id/ivRightArrow"
+            app:layout_constraintStart_toEndOf="@+id/lldotContainer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvtextthird"></com.smartyhome.app.utils.TextviewLight>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRightArrow"
+            android:layout_width="wrap_content"
+            android:gravity="right"
+            android:layout_margin="@dimen/dp_15"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvSkip"
+            android:src="@drawable/iv_next_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvtextthird"></androidx.appcompat.widget.AppCompatImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

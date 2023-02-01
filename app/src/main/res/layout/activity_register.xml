@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundclr"
+    android:orientation="vertical">
+
+     <androidx.appcompat.widget.AppCompatImageView
+         android:id="@+id/ivLogo"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="0.25"
+         android:layout_gravity="center"
+         android:src="@drawable/smart_logo"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:background="@drawable/rounded_cornerbackground_top"
+        android:layout_weight="1.80">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="@+id/viewbg"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo">
+
+            <com.smartyhome.app.utils.TextviewLight
+                android:id="@+id/tvSiupInHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_20"
+                android:text="@string/sign_up"
+                android:textColor="@color/primary_dark"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvFullNameHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:text="@string/first_name"
+                android:textColor="@color/primary_dark"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSiupInHead" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtFullName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@null"
+                android:drawableStart="@drawable/profile_icon"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/poppins_light"
+                android:hint="Your First Name"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintTop_toBottomOf="@+id/tvFullNameHead"></androidx.appcompat.widget.AppCompatEditText>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/primary_dark"
+                android:paddingStart="@dimen/dp_30"
+                app:layout_constraintEnd_toEndOf="@+id/edtFullName"
+                app:layout_constraintStart_toStartOf="@+id/edtFullName"
+                app:layout_constraintTop_toBottomOf="@+id/edtFullName"></View>
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvLastNameHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_30"
+                android:text="@string/last_name"
+                android:textColor="@color/primary_dark"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtLastName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@null"
+                android:drawableStart="@drawable/profile_icon"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/poppins_light"
+                android:hint="Your Last Name"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintTop_toBottomOf="@+id/tvLastNameHead"></androidx.appcompat.widget.AppCompatEditText>
+
+            <View
+                android:id="@+id/viewSepLastName"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/primary_dark"
+                android:paddingStart="@dimen/dp_30"
+                app:layout_constraintEnd_toEndOf="@+id/edtLastName"
+                app:layout_constraintStart_toStartOf="@+id/edtLastName"
+                app:layout_constraintTop_toBottomOf="@+id/edtLastName"></View>
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvEmailHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_30"
+                android:text="@string/email_id"
+                android:textColor="@color/primary_dark"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewSepLastName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@null"
+                android:drawableStart="@drawable/profile_icon"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/poppins_light"
+                android:hint="Your Email ID"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmailHead"></androidx.appcompat.widget.AppCompatEditText>
+
+            <ImageView
+                android:id="@+id/ivTickEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:src="@drawable/ic_tick"
+                app:layout_constraintBottom_toBottomOf="@+id/edtEmail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtEmail"
+                app:layout_constraintTop_toTopOf="@+id/edtEmail"></ImageView>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/primary_dark"
+                android:paddingStart="@dimen/dp_30"
+                app:layout_constraintEnd_toEndOf="@+id/ivTickEmail"
+                app:layout_constraintStart_toStartOf="@+id/edtEmail"
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail"></View>
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvPassHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_30"
+                android:text="@string/password"
+                android:textColor="@color/primary_dark"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtPass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@null"
+                android:drawableStart="@drawable/password_icon"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/poppins_light"
+                android:hint="Your Password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintTop_toBottomOf="@+id/tvPassHead"></androidx.appcompat.widget.AppCompatEditText>
+
+
+            <ImageView
+                android:id="@+id/ivEye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:src="@drawable/ic_eye_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/edtPass"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtPass"
+                app:layout_constraintTop_toTopOf="@+id/edtPass"></ImageView>
+
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/primary_dark"
+                android:paddingStart="@dimen/dp_30"
+                app:layout_constraintEnd_toEndOf="@+id/ivTickEmail"
+                app:layout_constraintStart_toStartOf="@+id/edtPass"
+                app:layout_constraintTop_toBottomOf="@+id/edtPass"></View>
+
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvombile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_30"
+                android:text="@string/mobile_number"
+                android:textColor="@color/primary_dark"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@null"
+                android:drawableStart="@drawable/password_icon"
+                android:drawablePadding="@dimen/dp_20"
+                android:fontFamily="@font/poppins_light"
+                android:hint="Your Mobile Number"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintTop_toBottomOf="@+id/tvombile"></androidx.appcompat.widget.AppCompatEditText>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/primary_dark"
+                android:paddingStart="@dimen/dp_30"
+                app:layout_constraintEnd_toEndOf="@+id/ivTickEmail"
+                app:layout_constraintStart_toStartOf="@+id/edtMobileNumber"
+                app:layout_constraintTop_toBottomOf="@+id/edtMobileNumber"></View>
+
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/edtPass"
+                app:layout_constraintStart_toStartOf="@+id/edtPass"
+                app:layout_constraintTop_toBottomOf="@+id/view4"></Button>
+
+
+            <com.smartyhome.app.utils.TextviewLight
+                android:id="@+id/tvNotRegHead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:gravity="right"
+                android:text="@string/already_registered"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toStartOf="@+id/tvSignIn"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvSignIn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_30"
+                android:gravity="start"
+                android:text="@string/sign_in"
+                android:textColor="@color/backgroundclr"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintStart_toEndOf="@+id/tvNotRegHead"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_progress_bar"></include>
+
+</LinearLayout>

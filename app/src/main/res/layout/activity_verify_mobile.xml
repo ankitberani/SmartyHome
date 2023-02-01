@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.register.VerifyMobileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_30"
+        tools:context=".main.register.VerifyMobileActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+        <com.smartyhome.app.utils.TextviewLight
+            android:id="@+id/tvHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            android:gravity="center"
+            android:text="@string/sending_verification_code"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtEnterCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@drawable/rounded_cornerbackground_grey"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="bottom"
+            android:hint="Enter Code"
+            android:inputType="number"
+            android:paddingStart="@dimen/dp_15"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintTop_toBottomOf="@+id/tvHead"></androidx.appcompat.widget.AppCompatEditText>
+
+
+        <com.smartyhome.app.utils.TextviewBold
+            android:id="@+id/tvCodeTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="00:00"
+            android:layout_marginStart="05dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="@+id/tvResendCode"
+            app:layout_constraintBottom_toBottomOf="@+id/tvResendCode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtEnterCode" />
+
+
+        <com.smartyhome.app.utils.TextviewBold
+            android:id="@+id/tvResendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="@string/resend_code"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            android:visibility="invisible"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtEnterCode" />
+
+        <Button
+            android:id="@+id/btnValidate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/verify"
+            android:enabled="false"
+            android:clickable="false"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvResendCode"></Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/layout_progress_bar"></include>
+</androidx.constraintlayout.widget.ConstraintLayout>

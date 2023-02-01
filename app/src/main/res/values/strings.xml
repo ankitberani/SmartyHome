@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Smarty Home</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="lorem_ispume_app">Lorem Ispume app</string>
+    <string name="lorem_ispume_app_simply">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
+    <string name="skip">Skip</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="email_id">Email ID</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_password_1">Forgot Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="haven_t_registered_yet">Haven\'t Registered Yet?</string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="already_registered">Already Registered?</string>
+    <string name="forget_details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam iaculis nibh enim fermentum Diam iaculis nibh enim</string>
+    <string name="continuetxt">Continue</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="didn_t_receive_email">Didn\'t received ?</string>
+    <string name="resend_code_in_30_sec"><u>Resend code</u></string>
+    <string name="new_pass">New Password</string>
+    <string name="cnfm_pass">Confirm Password</string>
+    <string name="save">Save</string>
+    <string name="control_panel">Home</string>
+    <string name="lightning">Lightning</string>
+    <string name="outside_temp">Outside Temp</string>
+    <string name="temp_indoor">Temp Indoor</string>
+    <string name="required">Required!</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="rooms">Rooms</string>
+    <string name="add">+ Add</string>
+    <string name="scenes">Scenes</string>
+    <string name="power_used_today">Power Used Today</string>
+    <string name="usage_today">Usage today</string>
+    <string name="turn_off_all_devices">Turn off all devices</string>
+    <string name="devices">Devices</string>
+    <string name="power">Power</string>
+    <string name="brightness">Brightness</string>
+    <string name="intensity">Intensity</string>
+    <string name="warm_white">Warm White</string>
+
+    <string name="cool_white">Cool White</string>
+    <string name="diy">DIY</string>
+    <string name="nothing_selected">Nothing selected</string>
+    <string name="success">Success</string>
+    <string name="status_off">Off</string>
+    <string name="status_on">On</string>
+    <string name="motion">Motion</string>
+    <string name="humidity">Humidity</string>
+    <string name="temprature">Temprature</string>
+    <string name="luminance">Luminance</string>
+    <string name="heat_index">Heat Index</string>
+    <string name="device_offline">Device Offline!</string>
+
+    <array name="menuOptions">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Settings</item>
+        <item>Change Password</item>
+        <item>Contact</item>
+        <item>About</item>
+    </array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yes">Yes</string>
+    <string name="logout">Logout</string>
+    <string name="logout_msg">Are you sure you want to logout?</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="dob">DOB</string>
+    <string name="time_zone">Time Zone</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="energy_cost">Energy Cost</string>
+    <string name="update">UPDATE</string>
+    <string name="rename_device">Rename Device</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="create_schedule">Create Schedule</string>
+    <string name="schedule">Schedule</string>
+    <string name="resend_code"><u>Resend Code</u></string>
+    <string name="verify">Verify</string>
+    <string name="a_verification_code_sent">A Verification code has been sent to your phone.\n %s</string>
+    <string name="sending_verification_code">Sending verification code..</string>
+    <string name="connect_internet">Please connect to Internet!!</string>
+    <string name="text_6_dig_pass_msg">At least 6 characted</string>
+    <string name="text_invalid_number">Invalid Mobile Number</string>
+    <string name="txt_mnth">Month</string>
+    <string name="day">Day</string>
+</resources>

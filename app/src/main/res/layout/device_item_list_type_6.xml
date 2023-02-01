@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@drawable/rounded_background_white"
+    android:fadingEdge="vertical"
+    android:paddingBottom="@dimen/dp_10"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dp_10"
+    app:cardElevation="02dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDevicesd1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/device_cell_height"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/rounded_background_white"
+        android:fadingEdge="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:cardElevation="02dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintd1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeviceStatusIcond1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="@dimen/dp_10"
+                android:src="@drawable/ic_wifi_off"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvDeviceNamed1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/ivDeviceStatusIcond1"
+                app:layout_constraintEnd_toStartOf="@+id/constraintMenud1"
+                app:layout_constraintStart_toEndOf="@+id/ivDeviceStatusIcond1"
+                app:layout_constraintTop_toTopOf="@+id/ivDeviceStatusIcond1"
+                tools:text="Kitchen" />
+
+            <com.smartyhome.app.utils.TextviewLight
+                android:id="@+id/tvDeviceTyped1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/secondary"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="@+id/tvDeviceNamed1"
+                app:layout_constraintStart_toStartOf="@+id/tvDeviceNamed1"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeviceNamed1"
+                tools:text="RGBB" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintMenud1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/left_bottom_corner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivInfoIcond1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_info"
+                    app:layout_constraintRight_toLeftOf="@+id/ivSettingIcond1"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSettingIcond1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_settings"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeviceSignald1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@drawable/ic_signal_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchOnOffd1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:checked="false"
+                android:gravity="center"
+                android:thumb="@drawable/thumb_selector_clrd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/constraintMenud1"
+                app:layout_constraintStart_toStartOf="@+id/constraintMenud1"
+                app:track="@drawable/track_selector_clred"></androidx.appcompat.widget.SwitchCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDevicesd2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/device_cell_height"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/rounded_background_white"
+        android:fadingEdge="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:cardElevation="02dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardDevicesd1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardDevicesd1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeviceStatusIcond2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="@dimen/dp_10"
+                android:src="@drawable/ic_wifi_off"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvDeviceNamed2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/ivDeviceStatusIcond2"
+                app:layout_constraintEnd_toStartOf="@+id/constraintMenud2"
+                app:layout_constraintStart_toEndOf="@+id/ivDeviceStatusIcond2"
+                app:layout_constraintTop_toTopOf="@+id/ivDeviceStatusIcond2"
+                tools:text="Kitchen" />
+
+            <com.smartyhome.app.utils.TextviewLight
+                android:id="@+id/tvDeviceTyped2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/secondary"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="@+id/tvDeviceNamed2"
+                app:layout_constraintStart_toStartOf="@+id/tvDeviceNamed2"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeviceNamed2"
+                tools:text="RGBB" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintMenud2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/left_bottom_corner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivInfoIcond2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_info"
+                    app:layout_constraintRight_toLeftOf="@+id/ivSettingIcond2"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSettingIcond2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_settings"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeviceSignald2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@drawable/ic_signal_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchOnOffd2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:checked="false"
+                android:gravity="center"
+                android:thumb="@drawable/thumb_selector_clrd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/constraintMenud2"
+                app:layout_constraintStart_toStartOf="@+id/constraintMenud2"
+                app:track="@drawable/track_selector_clred"></androidx.appcompat.widget.SwitchCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDevicesd3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/device_cell_height"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/rounded_background_white"
+        android:fadingEdge="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:cardElevation="02dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardDevicesd2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardDevicesd1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeviceStatusIcond3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="@dimen/dp_10"
+                android:src="@drawable/ic_wifi_off"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvDeviceNamed3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/ivDeviceStatusIcond3"
+                app:layout_constraintEnd_toStartOf="@+id/constraintMenud3"
+                app:layout_constraintStart_toEndOf="@+id/ivDeviceStatusIcond3"
+                app:layout_constraintTop_toTopOf="@+id/ivDeviceStatusIcond3"
+                tools:text="Kitchen" />
+
+            <com.smartyhome.app.utils.TextviewLight
+                android:id="@+id/tvDeviceTyped3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/secondary"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="@+id/tvDeviceNamed3"
+                app:layout_constraintStart_toStartOf="@+id/tvDeviceNamed3"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeviceNamed3"
+                tools:text="RGBB" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintMenud3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/left_bottom_corner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivInfoIcond3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_info"
+                    app:layout_constraintRight_toLeftOf="@+id/ivSettingIcond3"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSettingIcond3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_settings"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeviceSignald3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@drawable/ic_signal_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchOnOffd3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:checked="false"
+                android:gravity="center"
+                android:thumb="@drawable/thumb_selector_clrd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/constraintMenud3"
+                app:layout_constraintStart_toStartOf="@+id/constraintMenud3"
+                app:track="@drawable/track_selector_clred"></androidx.appcompat.widget.SwitchCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDevicesd4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/device_cell_height"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/rounded_background_white"
+        android:fadingEdge="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:cardElevation="02dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardDevicesd3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardDevicesd1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeviceStatusIcond4"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="@dimen/dp_10"
+                android:src="@drawable/ic_wifi_off"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvDeviceNamed4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/ivDeviceStatusIcond4"
+                app:layout_constraintEnd_toStartOf="@+id/constraintMenud4"
+                app:layout_constraintStart_toEndOf="@+id/ivDeviceStatusIcond4"
+                app:layout_constraintTop_toTopOf="@+id/ivDeviceStatusIcond4"
+                tools:text="Kitchen" />
+
+            <com.smartyhome.app.utils.TextviewLight
+                android:id="@+id/tvDeviceTyped4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/secondary"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="@+id/tvDeviceNamed4"
+                app:layout_constraintStart_toStartOf="@+id/tvDeviceNamed4"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeviceNamed4"
+                tools:text="RGBB" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintMenud4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/left_bottom_corner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivInfoIcond4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_info"
+                    app:layout_constraintRight_toLeftOf="@+id/ivSettingIcond4"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSettingIcond4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_settings"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeviceSignald4"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@drawable/ic_signal_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchOnOffd4"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:checked="false"
+                android:gravity="center"
+                android:thumb="@drawable/thumb_selector_clrd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/constraintMenud4"
+                app:layout_constraintStart_toStartOf="@+id/constraintMenud4"
+                app:track="@drawable/track_selector_clred"></androidx.appcompat.widget.SwitchCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

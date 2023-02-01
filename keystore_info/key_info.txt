@@ -1,0 +1,14 @@
+Keystore 
+
+All Pass : Smart@Raj
+
+Key name : key0
+
+
+
+
+keytool -list -v -keystore C:\Users\cbnits-143\.android -alias key0  -storepass Smart@Raj
+
+keytool -list -v -keystore C:\Users\cbnits-143\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android
+
+keytool -list -v -keystore c:\users\James\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android

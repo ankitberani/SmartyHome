@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.smartyhome.app.main.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constraintMain"
+        android:background="@color/backgroundclr"
+        tools:context=".main.login.LoginActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_70"
+            android:src="@drawable/smart_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewbg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@drawable/rounded_cornerbackground_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+        <com.smartyhome.app.utils.TextviewLight
+            android:id="@+id/tvSignInHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_70"
+            android:padding="@dimen/dp_20"
+            android:text="@string/sign_in"
+            android:textColor="@color/primary_dark"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+
+        <com.smartyhome.app.utils.TextviewBold
+            android:id="@+id/tvEmailHead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_30"
+            android:text="@string/email_id"
+            android:textColor="@color/primary_dark"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSignInHead" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@null"
+            android:drawableStart="@drawable/profile_icon"
+            android:drawablePadding="@dimen/dp_20"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Your Email ID"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintTop_toBottomOf="@+id/tvEmailHead"/>
+
+        <ImageView
+            android:id="@+id/ivTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:src="@drawable/ic_tick"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/edtEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edtEmail"
+            app:layout_constraintTop_toTopOf="@+id/edtEmail"/>
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/primary_dark"
+            android:paddingStart="@dimen/dp_30"
+            app:layout_constraintEnd_toEndOf="@+id/ivTick"
+            app:layout_constraintStart_toStartOf="@+id/edtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail"/>
+
+        <com.smartyhome.app.utils.TextviewBold
+            android:id="@+id/tvPassHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_30"
+            android:text="@string/password"
+            android:textColor="@color/primary_dark"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtPass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@null"
+            android:drawableStart="@drawable/password_icon"
+            android:drawablePadding="@dimen/dp_20"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Your Password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintTop_toBottomOf="@+id/tvPassHead"/>
+
+        <ImageView
+            android:id="@+id/ivEye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:src="@drawable/ic_eye_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/edtPass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edtPass"
+            app:layout_constraintTop_toTopOf="@+id/edtPass"/>
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/primary_dark"
+            android:paddingStart="@dimen/dp_30"
+            app:layout_constraintEnd_toEndOf="@+id/ivTick"
+            app:layout_constraintStart_toStartOf="@+id/edtPass"
+            app:layout_constraintTop_toBottomOf="@+id/edtPass"/>
+
+        <com.smartyhome.app.utils.TextviewLight
+            android:id="@+id/tvForgrotPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/forgot_password"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/sign_in"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/edtPass"
+            app:layout_constraintStart_toStartOf="@+id/edtPass"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgrotPass"/>
+
+
+        <com.smartyhome.app.utils.TextviewLight
+            android:id="@+id/tvNotRegHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_light"
+            android:text="@string/haven_t_registered_yet"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toStartOf="@+id/tvSignUp"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+        <com.smartyhome.app.utils.TextviewBold
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/sign_up"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/backgroundclr"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toEndOf="@+id/tvNotRegHead"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+        <include layout="@layout/layout_progress_bar"></include>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

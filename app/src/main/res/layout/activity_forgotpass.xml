@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp_30"
+    tools:context=".main.forgetpass.Forgotpass">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+    <com.smartyhome.app.utils.TextviewLight
+        android:id="@+id/tvForgrotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password_1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.smartyhome.app.utils.TextviewLight
+        android:id="@+id/tvForgrotPassdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+        android:gravity="center"
+        android:text="@string/forget_details"
+        android:textColor="@color/black_dull"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgrotPass" />
+
+
+    <com.smartyhome.app.utils.TextviewBold
+        android:id="@+id/tvEmailHead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mobile_number"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/primary_dark"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgrotPassdetails" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@null"
+        android:drawablePadding="@dimen/dp_20"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Enter Mobile Number"
+        android:singleLine="true"
+        android:textSize="@dimen/sp_16"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailHead"></androidx.appcompat.widget.AppCompatEditText>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/primary_dark"
+        android:paddingStart="@dimen/dp_30"
+        app:layout_constraintEnd_toEndOf="@+id/edtMobileNumber"
+        app:layout_constraintStart_toStartOf="@+id/edtMobileNumber"
+        app:layout_constraintTop_toBottomOf="@+id/edtMobileNumber"></View>
+
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/continuetxt"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@+id/view1"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

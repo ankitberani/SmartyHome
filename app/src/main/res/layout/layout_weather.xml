@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundclr"
+    android:id="@+id/llweather"
+    android:padding="@dimen/dp_20">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivwethericon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_vector_wether"
+        app:layout_constraintEnd_toStartOf="@+id/tvOutsideTempV"
+        app:layout_constraintStart_toStartOf="@+id/tvLighting"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+    <com.smartyhome.app.utils.TextviewLight
+        android:id="@+id/tvLighting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="@string/lightning"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toStartOf="@+id/tvOutsideTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivwethericon" />
+
+    <com.smartyhome.app.utils.TextviewBold
+        android:id="@+id/tvOutsideTempV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="12'"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toStartOf="@+id/tvTempindor"
+        app:layout_constraintStart_toEndOf="@+id/ivwethericon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.smartyhome.app.utils.TextviewBold
+        android:id="@+id/tcTemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="C"
+        android:layout_marginStart="@dimen/dp_30"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/tvTempindor"
+        app:layout_constraintStart_toEndOf="@+id/ivwethericon"
+        app:layout_constraintTop_toTopOf="@+id/tvOutsideTempV" />
+
+    <com.smartyhome.app.utils.TextviewLight
+        android:id="@+id/tvOutsideTemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="@string/outside_temp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvTempIndoor"
+        app:layout_constraintStart_toEndOf="@+id/tvLighting" />
+
+
+    <com.smartyhome.app.utils.TextviewBold
+        android:id="@+id/tvTempindor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="30'"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvOutsideTempV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.smartyhome.app.utils.TextviewBold
+        android:id="@+id/tvTempc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:layout_marginStart="25dp"
+        android:text="C"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvOutsideTempV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.smartyhome.app.utils.TextviewLight
+        android:id="@+id/tvTempIndoor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="@string/temp_indoor"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvOutsideTemp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

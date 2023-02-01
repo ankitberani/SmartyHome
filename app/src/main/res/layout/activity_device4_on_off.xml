@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundclr"
+    tools:context=".main.home.devicedetails.device4onoff.Device4OnOff">
+
+    <include layout="@layout/home_header"></include>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchOnOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:thumb="@drawable/thumb_selector"
+        app:layout_constraintEnd_toEndOf="@+id/homehead"
+        app:layout_constraintStart_toStartOf="@+id/homehead"
+        app:layout_constraintTop_toBottomOf="@+id/homehead"
+        app:track="@drawable/track_selector"></androidx.appcompat.widget.SwitchCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

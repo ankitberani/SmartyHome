@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginLeft="@dimen/dp_30"
+    android:layout_marginRight="@dimen/dp_30"
+    android:background="@drawable/rounded_cornerbackground_white"
+    android:paddingStart="@dimen/dp_15"
+    android:paddingEnd="@dimen/dp_15">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPowerIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:src="@drawable/ic_power_usage_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPowerUsedToday"
+        app:layout_constraintBottom_toTopOf="@+id/tvPowerUsedTodaytxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvPowerUsedToday"></androidx.appcompat.widget.AppCompatImageView>
+
+    <com.smartyhome.app.utils.TextviewBold
+        android:id="@+id/tvPowerUsedToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:fontFamily="@font/poppins_bold"
+        android:text="33,5 kwH"
+        android:textColor="#666159"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPowerIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.smartyhome.app.utils.TextviewLight
+        android:id="@+id/tvPowerUsedTodaytxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/power_used_today"
+        android:textColor="@color/backgroundclr"
+        android:textSize="@dimen/sp_08"
+        app:layout_constraintEnd_toStartOf="@+id/tvPowerUsedTodaytxt1"
+        app:layout_constraintStart_toStartOf="@+id/ivPowerIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvPowerUsedToday" />
+
+    <com.smartyhome.app.utils.TextviewBold
+        android:id="@+id/tvHumadityvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:fontFamily="@font/poppins_bold"
+        android:text="33,5"
+        android:textColor="#666159"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPowerIconHumadity"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPowerIconHumadity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:src="@drawable/ic_humadity"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPowerUsedToday"
+        app:layout_constraintBottom_toTopOf="@+id/tvPowerUsedTodaytxt"
+        app:layout_constraintStart_toStartOf="@+id/tvPowerUsedTodaytxt1"
+        app:layout_constraintTop_toTopOf="@+id/tvPowerUsedToday"></androidx.appcompat.widget.AppCompatImageView>
+
+
+    <com.smartyhome.app.utils.TextviewLight
+        android:id="@+id/tvPowerUsedTodaytxt1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="@string/power_used_today"
+        android:textColor="@color/backgroundclr"
+        android:textSize="@dimen/sp_08"
+        app:layout_constraintEnd_toEndOf="@+id/tvPowerUsedTodaytxt2"
+        app:layout_constraintStart_toEndOf="@+id/tvPowerUsedTodaytxt"
+        app:layout_constraintTop_toBottomOf="@+id/tvPowerUsedToday" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPowerBulb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:src="@drawable/ic_bulb_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPowerUsedTodaytxt2"
+        app:layout_constraintBottom_toTopOf="@+id/tvPowerUsedTodaytxt2"
+        app:layout_constraintStart_toStartOf="@+id/tvPowerUsedTodaytxt2"
+        app:layout_constraintTop_toTopOf="@+id/tvPowerUsedToday"></androidx.appcompat.widget.AppCompatImageView>
+
+    <com.smartyhome.app.utils.TextviewBold
+        android:id="@+id/tvpowerUsedvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:fontFamily="@font/poppins_bold"
+        android:text="33,5"
+        android:textColor="#666159"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPowerBulb"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.smartyhome.app.utils.TextviewLight
+        android:id="@+id/tvPowerUsedTodaytxt2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="@string/power_used_today"
+        android:textColor="@color/backgroundclr"
+        android:textSize="@dimen/sp_08"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPowerUsedTodaytxt1"
+        app:layout_constraintTop_toBottomOf="@+id/tvPowerUsedToday" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

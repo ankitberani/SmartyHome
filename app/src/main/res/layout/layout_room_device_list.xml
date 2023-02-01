@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_cornerbackground_top_grey"
+    android:padding="@dimen/dp_15"
+    android:layout_marginTop="@dimen/dp_20"
+    android:paddingStart="@dimen/dp_15"
+    android:paddingEnd="@dimen/dp_15">
+
+    <com.smartyhome.app.utils.TextviewBold
+        android:id="@+id/tvDevicesHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_20"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/devices"
+        android:textColor="#666159"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.smartyhome.app.utils.TextviewLight
+        android:id="@+id/tvAddDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_30"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/add"
+        android:textColor="@color/backgroundclr"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="@+id/ivChangeView"
+        app:layout_constraintRight_toLeftOf="@+id/ivChangeView"
+        app:layout_constraintTop_toTopOf="@+id/ivChangeView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivChangeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_change_view"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_30"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDeviceList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDevicesHead"
+        app:layout_constraintBottom_toTopOf="@+id/btnTurnOffDevice"
+        tools:itemCount="10"
+        tools:listitem="@layout/device_item_list_type_2"></androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btnTurnOffDevice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/turn_off_all_devices"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1"></Button>
+</androidx.constraintlayout.widget.ConstraintLayout>

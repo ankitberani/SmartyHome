@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardDevices"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@drawable/rounded_background_white"
+    android:fadingEdge="vertical"
+    android:paddingBottom="@dimen/dp_10"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dp_5"
+    app:cardElevation="02dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constarintHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeviceStatusIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="@dimen/dp_10"
+                android:src="@drawable/ic_wifi_off"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+            <com.smartyhome.app.utils.TextviewBold
+                android:id="@+id/tvDeviceName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/ivDeviceStatusIcon"
+                app:layout_constraintEnd_toStartOf="@+id/constraintMenu"
+                app:layout_constraintStart_toEndOf="@+id/ivDeviceStatusIcon"
+                app:layout_constraintTop_toTopOf="@+id/ivDeviceStatusIcon"
+                tools:text="Kitchen" />
+
+            <com.smartyhome.app.utils.TextviewLight
+                android:id="@+id/tvDeviceType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/secondary"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="@+id/tvDeviceName"
+                app:layout_constraintStart_toStartOf="@+id/tvDeviceName"
+                app:layout_constraintTop_toBottomOf="@+id/tvDeviceName"
+                tools:text="RGBB" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintMenu"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/left_bottom_corner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivInfoIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_info"
+                    app:layout_constraintRight_toLeftOf="@+id/ivSettingIcon"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSettingIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_settings"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDeviceSignal"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@drawable/ic_signal_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/switchOnOff"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/switchOnOff"></androidx.appcompat.widget.AppCompatImageView>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchOnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:checked="false"
+                android:gravity="center"
+                android:thumb="@drawable/thumb_selector_clrd"
+                app:layout_constraintEnd_toEndOf="@+id/constraintMenu"
+                app:layout_constraintStart_toStartOf="@+id/constraintMenu"
+                app:layout_constraintTop_toBottomOf="@+id/constraintMenu"
+                app:track="@drawable/track_selector_clred"></androidx.appcompat.widget.SwitchCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintMotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constarintHead">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHumadityIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/humidity_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+            <com.smartyhome.app.utils.TextviewLight
+                android:id="@+id/tvHumadity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:text="@string/humidity"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="@+id/ivHumadityIcon"
+                app:layout_constraintStart_toStartOf="@+id/ivHumadityIcon"
+                app:layout_constraintTop_toBottomOf="@+id/ivHumadityIcon"></com.smartyhome.app.utils.TextviewLight>
+
+
+            <RelativeLayout
+                android:id="@+id/rlHumadity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="2"
+                android:gravity="center|left"
+                app:layout_constraintStart_toEndOf="@+id/ivHumadityIcon"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.smartyhome.app.utils.TextviewLight
+                    android:id="@+id/tv_h_head_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/humidity"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_14"></com.smartyhome.app.utils.TextviewLight>
+
+                <com.smartyhome.app.utils.TextviewLight
+                    android:id="@+id/tv_h_value_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/tv_h_head_12"
+                    android:text="N/A"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"></com.smartyhome.app.utils.TextviewLight>
+
+
+                <com.smartyhome.app.utils.TextviewLight
+                    android:id="@+id/tv_t_head_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_h_head_12"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/temprature"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.smartyhome.app.utils.TextviewLight
+                    android:id="@+id/tv_t_value_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_h_value_12"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/tv_t_head_12"
+                    android:text="N/A"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"></com.smartyhome.app.utils.TextviewLight>
+
+                <com.smartyhome.app.utils.TextviewLight
+                    android:id="@+id/tv_hi_head_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_t_head_12"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/heat_index"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_14"></com.smartyhome.app.utils.TextviewLight>
+
+                <com.smartyhome.app.utils.TextviewLight
+                    android:id="@+id/tv_hi_value_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_t_head_12"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/tv_t_head_12"
+                    android:text="N/A"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"></com.smartyhome.app.utils.TextviewLight>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/deviderLuminace"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_grey"
+                app:layout_constraintTop_toBottomOf="@+id/tvHumadity"></View>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivluminusIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/lux_icon"
+                android:tint="@color/default_blue_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deviderLuminace"></androidx.appcompat.widget.AppCompatImageView>
+
+            <com.smartyhome.app.utils.TextviewLight
+                android:id="@+id/tvLuminus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:text="@string/luminance"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="@+id/ivluminusIcon"
+                app:layout_constraintStart_toStartOf="@+id/ivluminusIcon"
+                app:layout_constraintTop_toBottomOf="@+id/ivluminusIcon"></com.smartyhome.app.utils.TextviewLight>
+
+
+            <RelativeLayout
+                android:id="@+id/rlLumius"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="2"
+                app:layout_constraintBottom_toBottomOf="@+id/ivluminusIcon"
+                app:layout_constraintStart_toEndOf="@+id/ivluminusIcon"
+                app:layout_constraintTop_toTopOf="@+id/ivluminusIcon">
+
+
+                <com.smartyhome.app.utils.TextviewLight
+                    android:id="@+id/tv_lum_head_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/heat_index"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_14"></com.smartyhome.app.utils.TextviewLight>
+
+                <com.smartyhome.app.utils.TextviewLight
+                    android:id="@+id/tv_lum_value_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/tv_lum_head_12"
+                    android:text="N/A"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"></com.smartyhome.app.utils.TextviewLight>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/deviderMotion"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_grey"
+                app:layout_constraintTop_toBottomOf="@+id/tvLuminus"></View>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMotionIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/motion_icon"
+                android:tint="@color/default_blue_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deviderMotion"></androidx.appcompat.widget.AppCompatImageView>
+
+            <com.smartyhome.app.utils.TextviewLight
+                android:id="@+id/tvMotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:text="@string/motion"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="@+id/ivMotionIcon"
+                app:layout_constraintEnd_toEndOf="@+id/ivMotionIcon"
+                app:layout_constraintTop_toBottomOf="@+id/ivMotionIcon"></com.smartyhome.app.utils.TextviewLight>
+
+
+            <RelativeLayout
+                android:id="@+id/rlMotion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="2"
+                app:layout_constraintBottom_toBottomOf="@+id/ivMotionIcon"
+                app:layout_constraintStart_toEndOf="@+id/ivMotionIcon"
+                app:layout_constraintTop_toTopOf="@+id/ivMotionIcon">
+
+
+                <com.smartyhome.app.utils.TextviewLight
+                    android:id="@+id/tv_motion_head_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/motion"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_14"></com.smartyhome.app.utils.TextviewLight>
+
+                <com.smartyhome.app.utils.TextviewLight
+                    android:id="@+id/tv_motion_value_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@+id/tv_motion_head_12"
+                    android:text="N/A"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"></com.smartyhome.app.utils.TextviewLight>
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

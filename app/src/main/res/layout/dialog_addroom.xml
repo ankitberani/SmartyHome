@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    android:background="@drawable/darkback"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <include layout="@layout/card_rooms" />
+
+    <EditText
+        android:id="@+id/diaEditName"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/edittext"
+        android:hint="Enter Room Name"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="#45ffffff" />
+
+    <com.smartyhome.app.utils.TextviewLight
+        android:layout_width="match_parent"
+        android:id="@+id/tvSelectClr"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/poppins_light"
+        android:padding="5dp"
+        android:text="Select Color"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/ll_clr_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:weightSum="5">
+
+        <View
+            android:id="@+id/gradone"
+            style="@style/gradientView"
+            android:background="@drawable/gradone"
+            android:tag="gradone" />
+
+        <View
+            style="@style/gradientView"
+            android:background="@drawable/gradtwo"
+            android:id="@+id/gradtwo"
+            android:tag="gradtwo" />
+
+        <View
+            style="@style/gradientView"
+            android:background="@drawable/gradthree"
+            android:id="@+id/gradthree"
+            android:tag="gradthree" />
+
+        <View
+            style="@style/gradientView"
+            android:background="@drawable/gradfour"
+            android:id="@+id/gradfour"
+            android:tag="gradfour" />
+
+        <View
+            style="@style/gradientView"
+            android:background="@drawable/gradfive"
+            android:id="@+id/gradfive"
+            android:tag="gradfive" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_clr_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:weightSum="5">
+
+        <View
+            style="@style/gradientView"
+            android:background="@drawable/gradsix"
+            android:id="@+id/gradsix"
+            android:tag="gradsix" />
+
+        <View
+            style="@style/gradientView"
+            android:background="@drawable/gradseven"
+            android:id="@+id/gradseven"
+            android:tag="gradseven" />
+
+        <View
+            style="@style/gradientView"
+            android:background="@drawable/gradeight"
+            android:id="@+id/gradeight"
+            android:tag="gradeight" />
+
+        <View
+            style="@style/gradientView"
+            android:background="@drawable/gradnine"
+            android:id="@+id/gradnine"
+            android:tag="gradnine" />
+
+        <View
+            style="@style/gradientView"
+            android:background="@drawable/gradten"
+            android:id="@+id/gradten"
+            android:tag="gradten" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dia_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:text="CLOSE"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/dia_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:background="@drawable/edittext"
+            android:text="UPDATE"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

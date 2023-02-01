@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "569308771091",
+    "project_id": "smarthomemfa",
+    "storage_bucket": "smarthomemfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569308771091:android:60f56f38b3dde06e9ae0e6",
+        "android_client_info": {
+          "package_name": "com.smartyhome.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569308771091-iuigbi4p81br009fusephubcg479pjnb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smartyhome.app",
+            "certificate_hash": "e02304492bc6c8805b3ba447967210e5235d2ee4"
+          }
+        },
+        {
+          "client_id": "569308771091-js72e7u3fgmd9ik3eie7h3isl28vnu4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbHVomGD2i6CrcLLvqGQA8NhQqJrXPKiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569308771091-js72e7u3fgmd9ik3eie7h3isl28vnu4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
