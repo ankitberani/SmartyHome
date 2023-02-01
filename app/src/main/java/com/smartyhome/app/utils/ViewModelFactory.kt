@@ -13,7 +13,7 @@ class ViewModelFactory(
     private val _repository: ApiCallingRepository
 ) :
     ViewModelProvider.NewInstanceFactory() {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return if (modelClass.isAssignableFrom(LoginViewModel::class.java!!)) {
             LoginViewModel(this._repository) as T
         }else if (modelClass.isAssignableFrom(RegistrationViewModel::class.java!!)) {
